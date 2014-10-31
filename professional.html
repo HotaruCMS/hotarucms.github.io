@@ -81,22 +81,24 @@
             <p>This section is for the more advanced developers who are making plugins and extending development with themes beyond the basic UI</p>
           </div>
 
-              <h2>Memory Cache Objects</h2>
-              <br />
-              <p>Hotaru CMS has a few required dependencies:</p>
+            <h2>Memory Cache Objects</h2>
+            <br />
+            <p>Hotaru CMS has a number of variables that it loads into memory to speed up execution of </p>
 
-              <code
-                <pre>$this->pluginSettings = $init->pluginSettings;
-                        $this->plugins = $init->plugins;
+            <code>
+                <pre>
+                    $this->pluginSettings = $init->pluginSettings;
+                    $this->plugins = $init->plugins;
                 </pre>
             </code>
-              <code>
-              <pre>
-                        $this->categories = $init->categories;                      // List of categories
-                        $this->categoriesBySafeName = $init->categoriesBySafeName;
-                        $this->categoriesById = $init->categoriesById;
-              </pre>    
-              </code>
+            
+            <code>
+                <pre>
+                    $this->categories = $init->categories;                      // List of categories
+                    $this->categoriesBySafeName = $init->categoriesBySafeName;
+                    $this->categoriesById = $init->categoriesById;
+                </pre>    
+            </code>
             
               <br />
 
