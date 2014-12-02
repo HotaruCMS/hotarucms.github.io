@@ -86,19 +86,33 @@
             <p>Hotaru CMS has a number of variables that it loads into memory to speed up execution of </p>
 
             <code>
-<pre>
-$this->pluginSettings = $init->pluginSettings;
-</pre>
-                This lists the enabled plugins for the site. The array is a key list of the plugin names with their setting values
-                e.g. $this->pluginSettings[$setting['plugin_folder']][$setting['plugin_setting']];
-                </code>
+                $this->pluginSettings = $init->pluginSettings;
+            </code>
+            
+            <p>This lists the enabled plugins for the site.</p>
+            <p>The array is a key list of the plugin names with their setting values</p>
+            <p>e.g. $this->pluginSettings[$setting['plugin_folder']][$setting['plugin_setting']];</p>
                 
-            <code>
+                
+            
                 <pre>
                     $this->plugins = $init->plugins;
+$this->plugins['activeFolders'][$plugin->plugin_folder] = 1;
+$this->plugins['activeTypes'][$plugin->plugin_type] = 1;
+                    $this->allPluginDetails['pluginData'][$plugin->plugin_folder] = $plugin;
+                    $this->allPluginDetails['pluginFolderIndexOnClass'][$plugin->plugin_class] = $plugin->plugin_folder;
+                    
                 </pre>
             
             
+                <code>
+                    
+                    $this->allPluginDetails['hooks'];
+                    $this->allPluginDetails['hookdata'][$hooks->plugin_hook][$hooks->plugin_folder] = 1;
+                
+                </code>
+                
+                
             <code>
 <pre>
 $this->categories = $init->categories;
