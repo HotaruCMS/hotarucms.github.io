@@ -85,6 +85,14 @@
             <br />
             <p>Hotaru CMS has a number of variables that it loads into memory to speed up execution of </p>
 
+            <h3>Plugins</h3>
+            <code>
+            $this->plugins = $init->plugins;
+            $this->plugins['activeFolders'][$plugin->plugin_folder] = 1;
+            $this->plugins['activeTypes'][$plugin->plugin_type] = 1;
+            </code>
+
+            <h3>Plugin Settings</h3>
             <code>
                 $this->pluginSettings = $init->pluginSettings;
             </code>
@@ -94,31 +102,19 @@
             <p>e.g. $this->pluginSettings[$setting['plugin_folder']][$setting['plugin_setting']];</p>
                 
                 
-            
-                <pre>
-                    $this->plugins = $init->plugins;
-$this->plugins['activeFolders'][$plugin->plugin_folder] = 1;
-$this->plugins['activeTypes'][$plugin->plugin_type] = 1;
-                    $this->allPluginDetails['pluginData'][$plugin->plugin_folder] = $plugin;
-                    $this->allPluginDetails['pluginFolderIndexOnClass'][$plugin->plugin_class] = $plugin->plugin_folder;
-                    
-                </pre>
-            
-            
-                <code>
-                    
-                    $this->allPluginDetails['hooks'];
-                    $this->allPluginDetails['hookdata'][$hooks->plugin_hook][$hooks->plugin_folder] = 1;
+            <h3>allPluginDetails</h3>
+            <pre>
+                $this->allPluginDetails['pluginData'][$plugin->plugin_folder] = $plugin;
+                $this->allPluginDetails['pluginFolderIndexOnClass'][$plugin->plugin_class] = $plugin->plugin_folder;
+                $this->allPluginDetails['hooks'];
+                $this->allPluginDetails['hookdata'][$hooks->plugin_hook][$hooks->plugin_folder] = 1;
+            </pre>
                 
-                </code>
-                
-                
+            <h3>categories</h3>
             <code>
-<pre>
-$this->categories = $init->categories;
-$this->categoriesBySafeName = $init->categoriesBySafeName;
-$this->categoriesById = $init->categoriesById;
-</pre>    
+                $this->categories = $init->categories;
+                $this->categoriesBySafeName = $init->categoriesBySafeName;
+                $this->categoriesById = $init->categoriesById;   
             </code>
             
               <br />
