@@ -93,17 +93,18 @@ $this->plugins['activeTypes'][$plugin->plugin_type] = 1;</pre>
 
             <h3>Plugin Settings</h3>
             <pre>
-                $this->pluginSettings = $init->pluginSettings;</pre>
+$this->pluginSettings = $init->pluginSettings;</pre>
             
             <p>This lists the enabled plugins for the site.</p>
             <p>The array is a key list of the plugin names with their setting values</p>
-            <p>e.g. $this->pluginSettings[$setting['plugin_folder']][$setting['plugin_setting']];</p>
+            <p><code>$this->pluginSettings[$setting['plugin_folder']][$setting['plugin_setting']];</code></p>
                 
                 
             <h3>allPluginDetails</h3>
             <pre>
 $this->allPluginDetails['pluginData'][$plugin->plugin_folder] = $plugin;
 $this->allPluginDetails['pluginFolderIndexOnClass'][$plugin->plugin_class] = $plugin->plugin_folder;
+Hooks
 $this->allPluginDetails['hooks'];
 $this->allPluginDetails['hookdata'][$hooks->plugin_hook][$hooks->plugin_folder] = 1;</pre>
                 
