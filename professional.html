@@ -90,7 +90,10 @@
 $h->plugins['activeFolders'][plugin_folder] = 1;
 $h->plugins['activeTypes'][plugin_type] = 1;</pre>
             <p>
-                <b>Note:</b> There are no plugin details stored in these arrays. They are index arrays and operates like an index on a database table. Within the Hotaru code they are called as follows:
+                <b>Note:</b> There are no plugin details stored in these arrays. They are index arrays and operates like an index on a database table.
+            </p>
+            <p>
+                    Within the Hotaru code they are called as follows:
                 <code>
                     if (isset($h->plugins['activeFolders']['bookmarking'])) { // do something  }
                 </code>
